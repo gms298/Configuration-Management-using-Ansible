@@ -55,5 +55,5 @@ Create an ansible playbook that is able to:
 
 2. Then run [this shell script]().
 
-	* The script will clone the simple web server App 
+	* The script will clone this repository.
 	* After cloning, it runs the Ansible playbook to create a new AWS EC2 instance and then perform the necessary configuration management tasks. Finally the simple web server app is started automatically.
