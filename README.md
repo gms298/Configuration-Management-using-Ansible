@@ -19,10 +19,10 @@ Create an ansible playbook that is able to:
 
 ## Instructions
 
-### Setting up Ansible (local vagrant machine)
-
 1. Install [vagrant](https://www.vagrantup.com/downloads.html).
+
 2. Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads).
+
 3. Open Terminal on Mac OS X or command prompt on Windows and initialize a virtual machine. 
 
 	`vagrant init ubuntu/trusty64`
@@ -35,25 +35,12 @@ Create an ansible playbook that is able to:
 
     `vagrant ssh`
 
-6. Install ansible on this virtual machine (control server) using:
+6. Then download and run [this shell script](https://github.com/gms298/Configuration-Management-using-Ansible/blob/master/ansible.sh) by using`. ansible.sh`.
 
-    `sudo apt-get update`
-    
-    `sudo apt-get -y install git make vim python-dev python-pip libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev`
-
-    `sudo pip install ansible`
-
-7. Test if ansible along with it's dependencies such as python, etc is set up properly. Use this command:
-
-    `ansible all -m ping`
-
-## Running Playbook
-
-**Only After** setting up a centralized ansible control server - either locally or remotely (AWS) using the setup instructions above, run the following steps:
-
-1. SSH into ansible control server VM.
-
-2. Then run [this shell script]().
-
-	* The script will clone this repository.
-	* After cloning, it runs the Ansible playbook to create a new AWS EC2 instance and then perform the necessary configuration management tasks. Finally the simple web server app is started automatically.
+	* The script will automatically install all dependencies required for ansible and also install ansible.
+	
+	* Then it clones this repository.
+	
+	* After cloning, it runs the Ansible playbook to create a new AWS EC2 instance and then perform the necessary configuration management tasks.
+	 
+	* Finally the simple web server app is started automatically.
