@@ -27,7 +27,9 @@ Create an ansible playbook that is able to:
 
 	`vagrant init ubuntu/trusty64`
 
-4. Start-up the virtual machine using:
+	This will create a Ubuntu 14.04 virtual machine.
+	
+4. Boot the virtual machine using:
 
     `vagrant up`
     
