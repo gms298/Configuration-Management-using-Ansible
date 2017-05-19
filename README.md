@@ -51,6 +51,9 @@ Create an ansible playbook that is able to:
 
 **Only After** setting up a centralized ansible control server - either locally or remotely (AWS) using the setup instructions above, run the following steps:
 
-1. SSH into ansible control server VM and then clone this repo.
+1. SSH into ansible control server VM.
 
-2. Then use `ansible-playbook playbook.yml -i inventory -s -vvvv` to run the playbook. 
+2. Then run [this shell script]().
+
+	* The script will clone the simple web server App 
+	* After cloning, it runs the Ansible playbook to create a new AWS EC2 instance and then perform the necessary configuration management tasks. Finally the simple web server app is started automatically.
