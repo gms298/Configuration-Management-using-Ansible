@@ -3,7 +3,7 @@
   connection: local
   tasks:
   - name: Install boto
-    sudo: yes
+    become: yes
     pip: name=boto
 
   - include_vars: secret.yml
@@ -41,6 +41,6 @@
 
 - name: Setup
   hosts: ansible_ec2
-  sudo: yes
+  become: yes
   tasks:
   - include: setup.yml
